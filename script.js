@@ -1,8 +1,13 @@
+let prato;
+let bebida;
+let sobremesa;
+
 function frango(){
     document.getElementById("frango").style.borderColor= "green"
     document.getElementById("pizza").style.borderColor= "#fff"
     document.getElementById("hamburguer").style.borderColor= "#fff"
     document.getElementById("carne").style.borderColor= "#fff"
+    prato = "frango";
 }
 
 function pizza(){
@@ -10,6 +15,7 @@ function pizza(){
     document.getElementById("frango").style.borderColor= "#fff"
     document.getElementById("hamburguer").style.borderColor= "#fff"
     document.getElementById("carne").style.borderColor= "#fff"
+    prato = "pizza";
 }
 
 function hamburguer(){
@@ -17,6 +23,7 @@ function hamburguer(){
     document.getElementById("pizza").style.borderColor= "#fff"
     document.getElementById("frango").style.borderColor= "#fff"
     document.getElementById("carne").style.borderColor= "#fff"
+    prato = "hamburguer";
 }
 
 function carne(){
@@ -24,6 +31,7 @@ function carne(){
     document.getElementById("hamburguer").style.borderColor= "#fff"
     document.getElementById("pizza").style.borderColor= "#fff"
     document.getElementById("frango").style.borderColor= "#fff"
+    prato = "carne";
 }
 
 
@@ -36,6 +44,7 @@ function coca(){
     document.getElementById("cerveja").style.borderColor= "#fff"
     document.getElementById("suco").style.borderColor= "#fff"
     document.getElementById("agua").style.borderColor= "#fff"
+    bebida = "coca";
 }
 
 function cerveja(){
@@ -43,6 +52,7 @@ function cerveja(){
     document.getElementById("coca").style.borderColor= "#fff"
     document.getElementById("suco").style.borderColor= "#fff"
     document.getElementById("agua").style.borderColor= "#fff"
+    bebida = "cerveja";
 }
 
 function suco(){
@@ -50,6 +60,7 @@ function suco(){
     document.getElementById("cerveja").style.borderColor= "#fff"
     document.getElementById("coca").style.borderColor= "#fff"
     document.getElementById("agua").style.borderColor= "#fff"
+    bebida = "suco";
 }
 
 function agua(){
@@ -57,6 +68,7 @@ function agua(){
     document.getElementById("suco").style.borderColor= "#fff"
     document.getElementById("cerveja").style.borderColor= "#fff"
     document.getElementById("coca").style.borderColor= "#fff"
+    bebida = "agua";
 }
 
 
@@ -65,6 +77,7 @@ function pudim(){
     document.getElementById("bolo").style.borderColor= "#fff"
     document.getElementById("macarron").style.borderColor= "#fff"
     document.getElementById("brigadeiro").style.borderColor= "#fff"
+    sobremesa = "pudim";
 }
 
 function bolo(){
@@ -72,6 +85,7 @@ function bolo(){
     document.getElementById("pudim").style.borderColor= "#fff"
     document.getElementById("macarron").style.borderColor= "#fff"
     document.getElementById("brigadeiro").style.borderColor= "#fff"
+    sobremesa = "bolo";
 }
 
 function macarron(){
@@ -79,6 +93,7 @@ function macarron(){
     document.getElementById("bolo").style.borderColor= "#fff"
     document.getElementById("pudim").style.borderColor= "#fff"
     document.getElementById("brigadeiro").style.borderColor= "#fff"
+    sobremesa = "macarron";
 }
 
 function brigadeiro(){
@@ -86,4 +101,17 @@ function brigadeiro(){
     document.getElementById("macarron").style.borderColor= "#fff"
     document.getElementById("bolo").style.borderColor= "#fff"
     document.getElementById("pudim").style.borderColor= "#fff"
+    sobremesa = "brigadeiro";
 }
+
+function finalizar(){
+    let tipo = typeof prato;
+    alert (tipo)
+    if( prato && bebida && sobremesa !== undefined){
+    document.getElementById(botao).disabled = true;
+    alert("estado inicial")
+    }else{
+    document.getElementById(botao).disabled = true;
+    }
+}
+
