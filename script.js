@@ -108,7 +108,7 @@ function finalizar(){
     let tipo = typeof prato;
     alert (tipo)
     if( prato && bebida && sobremesa !== undefined){
-    document.getElementById(botao).disabled = true;
+    document.getElementById(botao).disabled = false;
     alert("estado inicial")
     }else{
     document.getElementById(botao).disabled = true;
