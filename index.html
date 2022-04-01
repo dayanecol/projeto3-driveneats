@@ -12,6 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="confirm_order escondido">
+        <div>
+            
+        </div>
+    </div>
     <div class="top">
         <div>
             <h1>DrivenEats</h1>
@@ -19,7 +24,9 @@
         </div>
         
     </div>
+    
     <div class="container">
+        
         <div class="first_order">
             <div class="order_title">
                 <h4>Primeiro, seu prato</h4>
@@ -166,7 +173,7 @@
         </div>
     </div>
     <div class="bottom">
-        <button class="finalizar" id="botao" onclick="finalizar()">
+        <button class="finalizar" id="botao" onclick="finalizar(),confirmarPedido()">
             <p class="fecharPedido">
                 Selecione os 3 itens para fechar o pedido
             </p>

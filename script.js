@@ -110,6 +110,15 @@ function finalizar(){
     document.getElementById("botao").innerHTML = "Fechar pedido";
     document.getElementById("botao").style.backgroundColor = "green";
     
+    
     }
 }
+
+function confirmarPedido(){
+    if( prato && bebida && sobremesa != undefined){
+
+    document.querySelector(".confirm_order").classList.remove("escondido");
+    document.querySelector(".website").classList.add("opaco");
+    }
+};
 
