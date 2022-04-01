@@ -25,7 +25,7 @@
                 <h4>Primeiro, seu prato</h4>
             </div>
             <div class="options">
-                <div class="option" id="frango" onclick="frango()">
+                <div class="option" id="frango" onclick="frango(),finalizar()">
                     <img src="img/frango.jpg">
                     <h3>Fango Yin Yang</h3>
                     <p class="info">
@@ -35,7 +35,7 @@
                         R$ 14,90
                     </p>
                 </div>
-                <div class="option" id="pizza" onclick="pizza()">
+                <div class="option" id="pizza" onclick="pizza(),finalizar()">
                     <img src="img/pizza.jpg">
                     <h3>Pizza na lenha</h3>
                     <p class="info">
@@ -45,7 +45,7 @@
                         R$ 24,90
                     </p>
                 </div>
-                <div class="option" id="hamburguer" onclick="hamburguer()">
+                <div class="option" id="hamburguer" onclick="hamburguer(),finalizar()">
                     <img src="img/hamburguer.jpg">
                     <h3>Hamburguer </h3>
                     <p class="info">
@@ -55,7 +55,7 @@
                         R$ 34,90
                     </p>
                 </div>
-                <div class="option" id="carne" onclick="carne()">
+                <div class="option" id="carne" onclick="carne(),finalizar()">
                     <img src="img/carne.jpg">
                     <h3>Churrasco</h3>
                     <p class="info">
@@ -73,7 +73,7 @@
                 <h4>Agora, sua bebida</h4>
             </div>
             <div class="options">
-                <div class="option" id="coca" onclick="coca()">
+                <div class="option" id="coca" onclick="coca(),finalizar()">
                     <img src="img/coca.jpg">
                     <h3>Coquinha gelada</h3>
                     <p class="info">
@@ -83,7 +83,7 @@
                         R$ 6,90
                     </p>
                 </div>
-                <div class="option" id="cerveja" onclick="cerveja()">
+                <div class="option" id="cerveja" onclick="cerveja(),finalizar()">
                     <img src="img/cerveja.jpg">
                     <h3>Cerveja artesanal</h3>
                     <p class="info">
@@ -93,7 +93,7 @@
                         R$ 14,90
                     </p>
                 </div>
-                <div class="option" id="suco" onclick="suco()">
+                <div class="option" id="suco" onclick="suco(),finalizar()">
                     <img src="img/suco.jpg">
                     <h3>Suco detox</h3>
                     <p class="info">
@@ -103,7 +103,7 @@
                         R$ 8,90
                     </p>
                 </div>
-                <div class="option" id="agua" onclick="agua()">
+                <div class="option" id="agua" onclick="agua(),finalizar()">
                     <img src="img/agua.png">
                     <h3>Água mineral </h3>
                     <p class="info">
@@ -121,7 +121,7 @@
                 <h4>Primeiro, seu prato</h4>
             </div>
             <div class="options">
-                <div class="option" id="pudim" onclick="pudim()">
+                <div class="option" id="pudim" onclick="pudim(),finalizar()" >
                     <img src="img/pudim.jpg">
                     <h3>Pudim Individual</h3>
                     <p class="info">
@@ -131,7 +131,7 @@
                         R$ 5,90
                     </p>
                 </div>
-                <div class="option" id="bolo" onclick="bolo()">
+                <div class="option" id="bolo" onclick="bolo(),finalizar()" >
                     <img src="img/bolo.jpg">
                     <h3>Fatia de bolo</h3>
                     <p class="info">
@@ -141,7 +141,7 @@
                         R$ 8,90
                     </p>
                 </div>
-                <div class="option" id="macarron" onclick="macarron()">
+                <div class="option" id="macarron" onclick="macarron(),finalizar()">
                     <img src="img/macarron.jpg">
                     <h3>Macarron </h3>
                     <p class="info">
@@ -151,7 +151,7 @@
                         R$ 6,90
                     </p>
                 </div>
-                <div class="option" id="brigadeiro" onclick="brigadeiro()">
+                <div class="option" id="brigadeiro" onclick="brigadeiro(),finalizar()" >
                     <img src="img/brigadeiro.jpg">
                     <h3>Brigadeirão</h3>
                     <p class="info">
@@ -167,7 +167,7 @@
     </div>
     <div class="bottom">
         <button class="finalizar" id="botao" onclick="finalizar()">
-            <p>
+            <p class="fecharPedido">
                 Selecione os 3 itens para fechar o pedido
             </p>
         </button>

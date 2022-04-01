@@ -36,9 +36,6 @@ function carne(){
 
 
 
-
-
-
 function coca(){
     document.getElementById("coca").style.borderColor= "green"
     document.getElementById("cerveja").style.borderColor= "#fff"
@@ -104,14 +101,15 @@ function brigadeiro(){
     sobremesa = "brigadeiro";
 }
 
+
+
+
 function finalizar(){
-    let tipo = typeof prato;
-    alert (tipo)
-    if( prato && bebida && sobremesa !== undefined){
-    document.getElementById(botao).disabled = false;
-    alert("estado inicial")
-    }else{
-    document.getElementById(botao).disabled = true;
+    if( prato && bebida && sobremesa != undefined){
+
+    document.getElementById("botao").innerHTML = "Fechar pedido";
+    document.getElementById("botao").style.backgroundColor = "green";
+    
     }
 }
 
