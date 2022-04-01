@@ -160,3 +160,9 @@ h4{
     display: none;
 }
 
+.message{
+    font-size: 22px;
+    color: #fff;
+    z-index: 2;
+}
+

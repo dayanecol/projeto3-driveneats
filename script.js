@@ -1,13 +1,20 @@
 let prato;
 let bebida;
 let sobremesa;
+let preco_prato;
+let preco_bebida;
+let preco_sobremesa;
+let celular;
+celular=21969186016;
+
 
 function frango(){
     document.getElementById("frango").style.borderColor= "green"
     document.getElementById("pizza").style.borderColor= "#fff"
     document.getElementById("hamburguer").style.borderColor= "#fff"
     document.getElementById("carne").style.borderColor= "#fff"
-    prato = "frango";
+    prato = "Fango Yin Yang";
+    preco_prato = 14.90;
 }
 
 function pizza(){
@@ -15,7 +22,7 @@ function pizza(){
     document.getElementById("frango").style.borderColor= "#fff"
     document.getElementById("hamburguer").style.borderColor= "#fff"
     document.getElementById("carne").style.borderColor= "#fff"
-    prato = "pizza";
+    prato = "Pizza na lenha";
 }
 
 function hamburguer(){
@@ -23,7 +30,7 @@ function hamburguer(){
     document.getElementById("pizza").style.borderColor= "#fff"
     document.getElementById("frango").style.borderColor= "#fff"
     document.getElementById("carne").style.borderColor= "#fff"
-    prato = "hamburguer";
+    prato = "Hamburguer";
 }
 
 function carne(){
@@ -31,7 +38,7 @@ function carne(){
     document.getElementById("hamburguer").style.borderColor= "#fff"
     document.getElementById("pizza").style.borderColor= "#fff"
     document.getElementById("frango").style.borderColor= "#fff"
-    prato = "carne";
+    prato = "Churrasco";
 }
 
 
@@ -41,7 +48,8 @@ function coca(){
     document.getElementById("cerveja").style.borderColor= "#fff"
     document.getElementById("suco").style.borderColor= "#fff"
     document.getElementById("agua").style.borderColor= "#fff"
-    bebida = "coca";
+    bebida = "Coquinha gelada";
+    preco_bebida = 6.90;
 }
 
 function cerveja(){
@@ -49,7 +57,7 @@ function cerveja(){
     document.getElementById("coca").style.borderColor= "#fff"
     document.getElementById("suco").style.borderColor= "#fff"
     document.getElementById("agua").style.borderColor= "#fff"
-    bebida = "cerveja";
+    bebida = "Cerveja artesanal";
 }
 
 function suco(){
@@ -57,7 +65,7 @@ function suco(){
     document.getElementById("cerveja").style.borderColor= "#fff"
     document.getElementById("coca").style.borderColor= "#fff"
     document.getElementById("agua").style.borderColor= "#fff"
-    bebida = "suco";
+    bebida = "Suco detox";
 }
 
 function agua(){
@@ -65,7 +73,7 @@ function agua(){
     document.getElementById("suco").style.borderColor= "#fff"
     document.getElementById("cerveja").style.borderColor= "#fff"
     document.getElementById("coca").style.borderColor= "#fff"
-    bebida = "agua";
+    bebida = "Água mineral";
 }
 
 
@@ -74,7 +82,8 @@ function pudim(){
     document.getElementById("bolo").style.borderColor= "#fff"
     document.getElementById("macarron").style.borderColor= "#fff"
     document.getElementById("brigadeiro").style.borderColor= "#fff"
-    sobremesa = "pudim";
+    sobremesa = "Pudim Individual";
+    preco_sobremesa = 5.90;
 }
 
 function bolo(){
@@ -82,7 +91,7 @@ function bolo(){
     document.getElementById("pudim").style.borderColor= "#fff"
     document.getElementById("macarron").style.borderColor= "#fff"
     document.getElementById("brigadeiro").style.borderColor= "#fff"
-    sobremesa = "bolo";
+    sobremesa = "Fatia de bolo";
 }
 
 function macarron(){
@@ -90,7 +99,7 @@ function macarron(){
     document.getElementById("bolo").style.borderColor= "#fff"
     document.getElementById("pudim").style.borderColor= "#fff"
     document.getElementById("brigadeiro").style.borderColor= "#fff"
-    sobremesa = "macarron";
+    sobremesa = "Macarron";
 }
 
 function brigadeiro(){
@@ -98,7 +107,7 @@ function brigadeiro(){
     document.getElementById("macarron").style.borderColor= "#fff"
     document.getElementById("bolo").style.borderColor= "#fff"
     document.getElementById("pudim").style.borderColor= "#fff"
-    sobremesa = "brigadeiro";
+    sobremesa = "Brigadeirão";
 }
 
 
@@ -109,6 +118,11 @@ function finalizar(){
 
     document.getElementById("botao").innerHTML = "Fechar pedido";
     document.getElementById("botao").style.backgroundColor = "green";
+    let message = `Olá, gostaria de fazer o pedido:\n- Prato: ${prato}\n- Bebida: ${bebida}\n- Sobremesa: ${sobremesa}\nTotal: R$ ${(preco_prato+preco_bebida+preco_sobremesa).toFixed(2)}`;
+    document.querySelector(".message").innerHTML = message;
+    message = window.encodeURIComponent(message);
+    window.open("https://wa.me/+55"+celular+"?text="+message);
+
     
     
     }
@@ -119,6 +133,15 @@ function confirmarPedido(){
 
     document.querySelector(".confirm_order").classList.remove("escondido");
     document.querySelector(".website").classList.add("opaco");
+    
     }
-};
+}
+
+
+
+function ajustadoEncodeURIComponent (str) {
+    return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
+      return '%' + c.charCodeAt(0).toString(16);
+    });
+  }
 
