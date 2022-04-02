@@ -12,11 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="confirm_order escondido">
-        <div>
-            <p class="message">Confirme seu pedido</p>
+    <div class="externo escondido">
+        <div class="confirm_order escondido">
+            <h3>Confirme seu pedido</h3>
+            <div class="detalhes_order">
+                <p class="message">DETALHES DO PEDIDO</p>
+            </div>
+            <button class="confirm" onclick="confirmarPedido()"><h3>Tudo certo, pode pedir!</h3></button>
+            <div class="cancel"><h3>Cancelar</h3></div>
         </div>
     </div>
+    
     <div class="top">
         <div>
             <h1>DrivenEats</h1>
@@ -32,7 +38,7 @@
                 <h4>Primeiro, seu prato</h4>
             </div>
             <div class="options">
-                <div class="option" id="frango" onclick="frango(),finalizar()">
+                <div class="option" id="frango" onclick="frango(),tresPedidos()">
                     <img src="img/frango.jpg">
                     <h3>Fango Yin Yang</h3>
                     <p class="info">
@@ -42,7 +48,7 @@
                         R$ 14,90
                     </p>
                 </div>
-                <div class="option" id="pizza" onclick="pizza(),finalizar()">
+                <div class="option" id="pizza" onclick="pizza(),tresPedidos()">
                     <img src="img/pizza.jpg">
                     <h3>Pizza na lenha</h3>
                     <p class="info">
@@ -52,7 +58,7 @@
                         R$ 24,90
                     </p>
                 </div>
-                <div class="option" id="hamburguer" onclick="hamburguer(),finalizar()">
+                <div class="option" id="hamburguer" onclick="hamburguer(),tresPedidos()">
                     <img src="img/hamburguer.jpg">
                     <h3>Hamburguer </h3>
                     <p class="info">
@@ -62,7 +68,7 @@
                         R$ 34,90
                     </p>
                 </div>
-                <div class="option" id="carne" onclick="carne(),finalizar()">
+                <div class="option" id="carne" onclick="carne(),tresPedidos()">
                     <img src="img/carne.jpg">
                     <h3>Churrasco</h3>
                     <p class="info">
@@ -80,7 +86,7 @@
                 <h4>Agora, sua bebida</h4>
             </div>
             <div class="options">
-                <div class="option" id="coca" onclick="coca(),finalizar()">
+                <div class="option" id="coca" onclick="coca(),tresPedidos()">
                     <img src="img/coca.jpg">
                     <h3>Coquinha gelada</h3>
                     <p class="info">
@@ -90,7 +96,7 @@
                         R$ 6,90
                     </p>
                 </div>
-                <div class="option" id="cerveja" onclick="cerveja(),finalizar()">
+                <div class="option" id="cerveja" onclick="cerveja(),tresPedidos()">
                     <img src="img/cerveja.jpg">
                     <h3>Cerveja artesanal</h3>
                     <p class="info">
@@ -100,7 +106,7 @@
                         R$ 14,90
                     </p>
                 </div>
-                <div class="option" id="suco" onclick="suco(),finalizar()">
+                <div class="option" id="suco" onclick="suco(),tresPedidos()">
                     <img src="img/suco.jpg">
                     <h3>Suco detox</h3>
                     <p class="info">
@@ -110,7 +116,7 @@
                         R$ 8,90
                     </p>
                 </div>
-                <div class="option" id="agua" onclick="agua(),finalizar()">
+                <div class="option" id="agua" onclick="agua(),tresPedidos()">
                     <img src="img/agua.png">
                     <h3>Água mineral </h3>
                     <p class="info">
@@ -128,7 +134,7 @@
                 <h4>Primeiro, seu prato</h4>
             </div>
             <div class="options">
-                <div class="option" id="pudim" onclick="pudim(),finalizar()" >
+                <div class="option" id="pudim" onclick="pudim(),tresPedidos()" >
                     <img src="img/pudim.jpg">
                     <h3>Pudim Individual</h3>
                     <p class="info">
@@ -138,7 +144,7 @@
                         R$ 5,90
                     </p>
                 </div>
-                <div class="option" id="bolo" onclick="bolo(),finalizar()" >
+                <div class="option" id="bolo" onclick="bolo(),tresPedidos()" >
                     <img src="img/bolo.jpg">
                     <h3>Fatia de bolo</h3>
                     <p class="info">
@@ -148,7 +154,7 @@
                         R$ 8,90
                     </p>
                 </div>
-                <div class="option" id="macarron" onclick="macarron(),finalizar()">
+                <div class="option" id="macarron" onclick="macarron(),tresPedidos()">
                     <img src="img/macarron.jpg">
                     <h3>Macarron </h3>
                     <p class="info">
@@ -158,7 +164,7 @@
                         R$ 6,90
                     </p>
                 </div>
-                <div class="option" id="brigadeiro" onclick="brigadeiro(),finalizar()" >
+                <div class="option" id="brigadeiro" onclick="brigadeiro(),tresPedidos()" >
                     <img src="img/brigadeiro.jpg">
                     <h3>Brigadeirão</h3>
                     <p class="info">
@@ -173,7 +179,7 @@
         </div>
     </div>
     <div class="bottom">
-        <button class="finalizar" id="botao" onclick="finalizar(),confirmarPedido()">
+        <button class="tresPedidos" id="botao" onclick="tresPedidos(),finalizar()">
             <p class="fecharPedido">
                 Selecione os 3 itens para fechar o pedido
             </p>

@@ -5,6 +5,8 @@ let preco_prato;
 let preco_bebida;
 let preco_sobremesa;
 let celular;
+let nome;
+let endereco;
 celular=21969186016;
 
 
@@ -113,35 +115,34 @@ function brigadeiro(){
 
 
 
-function finalizar(){
+function tresPedidos(){
     if( prato && bebida && sobremesa != undefined){
 
     document.getElementById("botao").innerHTML = "Fechar pedido";
     document.getElementById("botao").style.backgroundColor = "green";
-    let message = `Olá, gostaria de fazer o pedido:\n- Prato: ${prato}\n- Bebida: ${bebida}\n- Sobremesa: ${sobremesa}\nTotal: R$ ${(preco_prato+preco_bebida+preco_sobremesa).toFixed(2)}`;
-    document.querySelector(".message").innerHTML = message;
-    message = window.encodeURIComponent(message);
-    window.open("https://wa.me/+55"+celular+"?text="+message);
+    // let texto = ´${prato}\n ${bebida}\n ${sobremesa}\n TOTAL´;
+    document.querySelector(".message").innerHTML = "Frango\n Carne\n sobremesa\n";
+    
+    }
+}
 
+function finalizar(){
+    if( prato && bebida && sobremesa != undefined){
     
-    
+    document.querySelector(".confirm_order").classList.remove("escondido");
+    document.querySelector(".externo").classList.remove("escondido");
     }
 }
 
 function confirmarPedido(){
     if( prato && bebida && sobremesa != undefined){
-
-    document.querySelector(".confirm_order").classList.remove("escondido");
-    document.querySelector(".website").classList.add("opaco");
-    
+    nome=prompt("A entrega deve ser realizada em que nome?");
+    endereco=prompt("Qual o endereço de entrega?")
+    let message = `Olá, gostaria de fazer o pedido:\n- Prato: ${prato}\n- Bebida: ${bebida}\n- Sobremesa: ${sobremesa}\nTotal: R$ ${(preco_prato+preco_bebida+preco_sobremesa).toFixed(2)}\nNome: ${nome}\nEndereço: ${endereco}`;
+    message = window.encodeURIComponent(message);
+    window.open("https://wa.me/+55"+celular+"?text="+message);
     }
+
 }
 
-
-
-function ajustadoEncodeURIComponent (str) {
-    return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
-      return '%' + c.charCodeAt(0).toString(16);
-    });
-  }
 

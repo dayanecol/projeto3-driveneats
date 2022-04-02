@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 body{
-    /* font-family: 'Righteous', cursive; */
     font-family: 'Roboto', sans-serif;
     background-color: #e5e5e5;
 }
@@ -16,6 +15,8 @@ h3{
     
 }
 
+
+
 h4{
     font-family: 'Righteous', cursive;
     font-weight: 400;
@@ -24,6 +25,8 @@ h4{
     letter-spacing: 0.018em;
     color:#333;
 }
+
+
 
 .top h1{
     font-family: 'Righteous', cursive;
@@ -41,6 +44,35 @@ h4{
     color:#fff;
 }
 
+.confirm h3{
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #50D074;
+}
+
+.cancel h3{
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.018em;
+    color: #fff;
+    background-color: none;
+    border: none;
+}
+
+.confirm {
+    width: 329px;
+    height: 52px;
+    background-color: #fff;
+    border-radius: 100px;
+    border: none;
+}
+
+.confirm_order >h3{
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
 
 .top{
     background-color: #CF2B2B;
@@ -135,7 +167,7 @@ h4{
     padding: 5px 80px;
 }
 
-.confirm_order {
+.externo {
     width:100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.9);
@@ -148,7 +180,11 @@ h4{
     z-index: 1;
 }
 
-.confirm_order div{
+.confirm_order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width:377px;
     height: 353px;
     background-color: #50D074;
@@ -161,8 +197,17 @@ h4{
 }
 
 .message{
+
     font-size: 22px;
     color: #fff;
-    z-index: 2;
+    /* z-index: 2; */
+}
+
+.detalhes_order{
+    width: 326px;
+    height: 147px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
