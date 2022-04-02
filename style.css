@@ -1,106 +1,100 @@
-*{
+* {
     box-sizing: border-box;
-}
-body{
-    font-family: 'Roboto', sans-serif;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
     background-color: #e5e5e5;
-}
-
-h3{
+  }
+  
+  h3 {
     font-weight: 700;
     font-size: 16px;
     line-height: 18.75px;
-    color:#333;
-    
-    
-}
-
-
-
-h4{
-    font-family: 'Righteous', cursive;
+    color: #333;
+  }
+  
+  h4 {
+    font-family: "Righteous", cursive;
     font-weight: 400;
     font-size: 26px;
     line-height: 32px;
     letter-spacing: 0.018em;
-    color:#333;
-}
-
-
-
-.top h1{
-    font-family: 'Righteous', cursive;
+    color: #333;
+  }
+  
+  .top h1 {
+    font-family: "Righteous", cursive;
     font-weight: 400;
     font-size: 44px;
     line-height: 55px;
     letter-spacing: -0.012em;
-    color:#fff;
-}
-
-.top h2{
+    color: #fff;
+  }
+  
+  .top h2 {
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
-    color:#fff;
-}
-
-.confirm h3{
+    color: #fff;
+  }
+  
+  .confirm h3 {
     font-size: 22px;
     line-height: 26px;
     text-align: center;
-    color: #50D074;
-}
-
-.cancel h3{
+    color: #50d074;
+  }
+  
+  .cancel h3 {
     font-size: 20px;
     line-height: 23px;
     letter-spacing: 0.018em;
     color: #fff;
     background-color: none;
     border: none;
-}
-
-.confirm {
+  }
+  
+  .confirm {
     width: 329px;
     height: 52px;
     background-color: #fff;
     border-radius: 100px;
     border: none;
-}
-
-.confirm_order >h3{
+  }
+  
+  .confirm_order > h3 {
     font-size: 22px;
     line-height: 26px;
-    color: #FFFFFF;
-}
-
-.top{
-    background-color: #CF2B2B;
+    color: #ffffff;
+  }
+  
+  .top {
+    background-color: #cf2b2b;
     height: 92px;
     width: 100%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     position: fixed;
     left: 0;
     top: 0;
-}
-
-.top div{
+  }
+  
+  .top div {
     padding: 8px 0 18px 21px;
-}
-
-.container{
+  }
+  
+  .container {
     margin-top: 123px;
     margin-left: 19px;
-}
-
-.options{
+  }
+  
+  .options {
     height: 216px;
     display: flex;
     justify-content: flex-start;
     overflow-x: scroll;
-}
-
-.option{
+  }
+  
+  .option {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -113,32 +107,33 @@ h4{
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
     border: 4px solid #fff;
-}
-
-.option img{
+  }
+  
+  .option img {
     width: 144px;
     height: 87px;
     border-radius: 4px;
-}
-
-.info{
+  }
+  
+  .info {
     font-weight: 300;
     font-size: 15px;
     line-height: 18px;
     color: #a6a6a6;
     width: 147px;
     height: 39px;
-}
-
-.first_order,.second_order{
-    margin-bottom:27px ;
-}
-
-.third_order{
+  }
+  
+  .first_order,
+  .second_order {
+    margin-bottom: 27px;
+  }
+  
+  .third_order {
     margin-bottom: 108px;
-}
-
-.bottom {
+  }
+  
+  .bottom {
     background-color: #fff;
     height: 92px;
     width: 100%;
@@ -148,66 +143,77 @@ h4{
     position: fixed;
     bottom: 0;
     left: 0;
-}
-
-.bottom button{
+  }
+  
+  .bottom button {
     width: 364px;
     height: 61px;
     border-radius: 50px;
     background-color: #cbcbcb;
     border: none;
-}
-
-.finalizar p {
+  }
+  
+  .finalizar p {
     font-weight: 400;
     font-size: 20px;
-    line-height:24px;
+    line-height: 24px;
     color: #fff;
     text-align: justify;
     padding: 5px 80px;
-}
-
-.externo {
-    width:100%;
+  }
+  
+  .externo {
+    width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.9);
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
-}
-
-.confirm_order {
+  }
+  
+  .confirm_order {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width:377px;
+    width: 377px;
     height: 353px;
-    background-color: #50D074;
+    background-color: #50d074;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
-}
-
-.escondido{
+  }
+  
+  .escondido {
     display: none;
-}
-
-.message{
-
+  }
+  
+  .message {
     font-size: 22px;
     color: #fff;
     /* z-index: 2; */
-}
-
-.detalhes_order{
+  }
+  
+  .detalhes_order {
     width: 326px;
     height: 147px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
+  }
+  
+  .selecionado_prato {
+    border: 4px solid blue;
+  }
+  
+  .selecionado_bebida {
+    border: 4px solid red;
+  }
+  
+  .selecionado_sobremesa {
+    border: 4px solid purple;
+  }
+  

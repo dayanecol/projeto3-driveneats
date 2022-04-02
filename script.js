@@ -4,146 +4,84 @@ let sobremesa;
 let preco_prato;
 let preco_bebida;
 let preco_sobremesa;
+let preco_prato_string;
+let preco_bebida_string;
+let preco_sobremesa_string;
 let celular;
 let nome;
 let endereco;
-celular=21969186016;
+celular = 21969186016;
 
+//Fução para selecionar o Prato
+function selecionarPrato(elemento) {
+  let pratoSelecionado = document.querySelector(".selecionado_prato");
+  if (pratoSelecionado !== null) {
+    pratoSelecionado.classList.remove("selecionado_prato");
+  }
+  elemento.classList.add("selecionado_prato");
 
-function frango(){
-    document.getElementById("frango").style.borderColor= "green"
-    document.getElementById("pizza").style.borderColor= "#fff"
-    document.getElementById("hamburguer").style.borderColor= "#fff"
-    document.getElementById("carne").style.borderColor= "#fff"
-    prato = "Fango Yin Yang";
-    preco_prato = 14.90;
+  prato = document.querySelector(".selecionado_prato .nome").innerText;
+  preco_prato_string = document.querySelector(".selecionado_prato .price")
+    .innerText;
 }
 
-function pizza(){
-    document.getElementById("pizza").style.borderColor= "green"
-    document.getElementById("frango").style.borderColor= "#fff"
-    document.getElementById("hamburguer").style.borderColor= "#fff"
-    document.getElementById("carne").style.borderColor= "#fff"
-    prato = "Pizza na lenha";
+//Fução para selecionar a Bebida
+function selecionarBebida(elemento) {
+  let bebidaSelecionado = document.querySelector(".selecionado_bebida");
+  if (bebidaSelecionado !== null) {
+    bebidaSelecionado.classList.remove("selecionado_bebida");
+  }
+  elemento.classList.add("selecionado_bebida");
+
+  bebida = document.querySelector(".selecionado_bebida .nome").innerText;
+  preco_bebida_string = document.querySelector(".selecionado_bebida .price")
+    .innerText;
 }
 
-function hamburguer(){
-    document.getElementById("hamburguer").style.borderColor= "green"
-    document.getElementById("pizza").style.borderColor= "#fff"
-    document.getElementById("frango").style.borderColor= "#fff"
-    document.getElementById("carne").style.borderColor= "#fff"
-    prato = "Hamburguer";
+//Fução para selecionar a Sobremesa
+function selecionarSobremesa(elemento) {
+  let sobremesaSelecionado = document.querySelector(".selecionado_sobremesa");
+  if (sobremesaSelecionado !== null) {
+    sobremesaSelecionado.classList.remove("selecionado_sobremesa");
+  }
+  elemento.classList.add("selecionado_sobremesa");
+
+  sobremesa = document.querySelector(".selecionado_sobremesa .nome").innerText;
+  preco_sobremesa_string = document.querySelector(
+    ".selecionado_sobremesa .price"
+  ).innerText;
 }
 
-function carne(){
-    document.getElementById("carne").style.borderColor= "green"
-    document.getElementById("hamburguer").style.borderColor= "#fff"
-    document.getElementById("pizza").style.borderColor= "#fff"
-    document.getElementById("frango").style.borderColor= "#fff"
-    prato = "Churrasco";
-}
-
-
-
-function coca(){
-    document.getElementById("coca").style.borderColor= "green"
-    document.getElementById("cerveja").style.borderColor= "#fff"
-    document.getElementById("suco").style.borderColor= "#fff"
-    document.getElementById("agua").style.borderColor= "#fff"
-    bebida = "Coquinha gelada";
-    preco_bebida = 6.90;
-}
-
-function cerveja(){
-    document.getElementById("cerveja").style.borderColor= "green"
-    document.getElementById("coca").style.borderColor= "#fff"
-    document.getElementById("suco").style.borderColor= "#fff"
-    document.getElementById("agua").style.borderColor= "#fff"
-    bebida = "Cerveja artesanal";
-}
-
-function suco(){
-    document.getElementById("suco").style.borderColor= "green"
-    document.getElementById("cerveja").style.borderColor= "#fff"
-    document.getElementById("coca").style.borderColor= "#fff"
-    document.getElementById("agua").style.borderColor= "#fff"
-    bebida = "Suco detox";
-}
-
-function agua(){
-    document.getElementById("agua").style.borderColor= "green"
-    document.getElementById("suco").style.borderColor= "#fff"
-    document.getElementById("cerveja").style.borderColor= "#fff"
-    document.getElementById("coca").style.borderColor= "#fff"
-    bebida = "Água mineral";
-}
-
-
-function pudim(){
-    document.getElementById("pudim").style.borderColor= "green"
-    document.getElementById("bolo").style.borderColor= "#fff"
-    document.getElementById("macarron").style.borderColor= "#fff"
-    document.getElementById("brigadeiro").style.borderColor= "#fff"
-    sobremesa = "Pudim Individual";
-    preco_sobremesa = 5.90;
-}
-
-function bolo(){
-    document.getElementById("bolo").style.borderColor= "green"
-    document.getElementById("pudim").style.borderColor= "#fff"
-    document.getElementById("macarron").style.borderColor= "#fff"
-    document.getElementById("brigadeiro").style.borderColor= "#fff"
-    sobremesa = "Fatia de bolo";
-}
-
-function macarron(){
-    document.getElementById("macarron").style.borderColor= "green"
-    document.getElementById("bolo").style.borderColor= "#fff"
-    document.getElementById("pudim").style.borderColor= "#fff"
-    document.getElementById("brigadeiro").style.borderColor= "#fff"
-    sobremesa = "Macarron";
-}
-
-function brigadeiro(){
-    document.getElementById("brigadeiro").style.borderColor= "green"
-    document.getElementById("macarron").style.borderColor= "#fff"
-    document.getElementById("bolo").style.borderColor= "#fff"
-    document.getElementById("pudim").style.borderColor= "#fff"
-    sobremesa = "Brigadeirão";
-}
-
-
-
-
-function tresPedidos(){
-    if( prato && bebida && sobremesa != undefined){
-
+function tresPedidos() {
+  console.log(prato);
+  console.log(bebida);
+  console.log(sobremesa);
+  if (prato && bebida && sobremesa !== undefined) {
     document.getElementById("botao").innerHTML = "Fechar pedido";
     document.getElementById("botao").style.backgroundColor = "green";
     // let texto = ´${prato}\n ${bebida}\n ${sobremesa}\n TOTAL´;
-    let message = `Olá, gostaria de fazer o pedido:\n- Prato: ${prato}\n- Bebida: ${bebida}\n- Sobremesa: ${sobremesa}\nTotal: R$ ${(preco_prato+preco_bebida+preco_sobremesa).toFixed(2)}`;
+    let message = `Olá, gostaria de fazer o pedido:\n Prato: ${prato} ${preco_prato_string}\n Bebida: ${bebida} ${preco_bebida_string} \n Sobremesa: ${sobremesa} ${preco_sobremesa_string} \n Total:`;
     document.querySelector(".message").innerHTML = message;
-    
-    }
+  }
 }
 
-function finalizar(){
-    if( prato && bebida && sobremesa != undefined){
-    
+function finalizar() {
+  if (prato && bebida && sobremesa != undefined) {
     document.querySelector(".confirm_order").classList.remove("escondido");
     document.querySelector(".externo").classList.remove("escondido");
-    }
+  }
 }
 
-function confirmarPedido(){
-    if( prato && bebida && sobremesa != undefined){
-    nome=prompt("A entrega deve ser realizada em que nome?");
-    endereco=prompt("Qual o endereço de entrega?")
-    let message = `Olá, gostaria de fazer o pedido:\n- Prato: ${prato}\n- Bebida: ${bebida}\n- Sobremesa: ${sobremesa}\nTotal: R$ ${(preco_prato+preco_bebida+preco_sobremesa).toFixed(2)}\nNome: ${nome}\nEndereço: ${endereco}`;
+function confirmarPedido() {
+  if (prato && bebida && sobremesa != undefined) {
+    nome = prompt("A entrega deve ser realizada em que nome?");
+    endereco = prompt("Qual o endereço de entrega?");
+    let message = `Olá, gostaria de fazer o pedido:\n- Prato: ${prato}\n- Bebida: ${bebida}\n- Sobremesa: ${sobremesa}\nTotal: R$ ${(
+      preco_prato +
+      preco_bebida +
+      preco_sobremesa
+    ).toFixed(2)}\nNome: ${nome}\nEndereço: ${endereco}`;
     message = window.encodeURIComponent(message);
-    window.open("https://wa.me/+55"+celular+"?text="+message);
-    }
-
+    window.open("https://wa.me/+55" + celular + "?text=" + message);
+  }
 }
-
-
