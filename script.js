@@ -121,7 +121,8 @@ function tresPedidos(){
     document.getElementById("botao").innerHTML = "Fechar pedido";
     document.getElementById("botao").style.backgroundColor = "green";
     // let texto = ´${prato}\n ${bebida}\n ${sobremesa}\n TOTAL´;
-    document.querySelector(".message").innerHTML = "Frango\n Carne\n sobremesa\n";
+    let message = `Olá, gostaria de fazer o pedido:\n- Prato: ${prato}\n- Bebida: ${bebida}\n- Sobremesa: ${sobremesa}\nTotal: R$ ${(preco_prato+preco_bebida+preco_sobremesa).toFixed(2)}`;
+    document.querySelector(".message").innerHTML = message;
     
     }
 }
