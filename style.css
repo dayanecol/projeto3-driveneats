@@ -220,12 +220,24 @@ h4 {
     align-items: flex-start;
 }
 
+.detalhes_order div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .detalhes_order p{
     color: #fff;
     font-size: 22px;
     line-height: 26px;
     letter-spacing: 0.018em;
 }
+
+.detalhes_order >p{
+    font-weight: bold;
+
+}
+
   
 .selecionado_prato {
     border: 4px solid #32B72F;

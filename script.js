@@ -74,13 +74,19 @@ function tresPedidos() {
         document.getElementById("botao").style.fontWeight = "bold";
     // let message = `Olá, gostaria de fazer o pedido:\n Prato: ${prato} ${preco_prato_string}\n Bebida: ${bebida} ${preco_bebida_string} \n Sobremesa: ${sobremesa} ${preco_sobremesa_string} \n Total: R$ ${(preco_prato + preco_bebida + preco_sobremesa).toFixed(2).toString().replace('.',',')}`;
     // document.querySelector(".message").innerHTML = message;
-    let message_prato = `${prato} RS${preco_prato_string}`;
+    let message_prato = `${prato}`;
     document.querySelector(".message_prato").innerHTML = message_prato;
-    let message_bebida = `${bebida} R$${preco_bebida_string}`;
+    let message_prato_preco = `${preco_prato_string}`;
+    document.querySelector(".message_prato_preco").innerHTML = message_prato_preco;
+    let message_bebida = `${bebida}`;
     document.querySelector(".message_bebida").innerHTML = message_bebida;
-    let message_sobremesa = `${sobremesa} R$${preco_sobremesa_string}`;
+    let message_bebida_preco = `${preco_bebida_string}`;
+    document.querySelector(".message_bebida_preco").innerHTML = message_bebida_preco;
+    let message_sobremesa = `${sobremesa}`;
     document.querySelector(".message_sobremesa").innerHTML = message_sobremesa;
-    let message_total = `Total: R$ ${(preco_prato + preco_bebida + preco_sobremesa).toFixed(2).toString().replace('.',',')}`;
+    let message_sobremesa_preco = `${preco_sobremesa_string}`;
+    document.querySelector(".message_sobremesa_preco").innerHTML = message_sobremesa_preco;
+    let message_total = `TOTAL R$ ${(preco_prato + preco_bebida + preco_sobremesa).toFixed(2).toString().replace('.',',')}`;
     document.querySelector(".message_total").innerHTML = message_total;
   }
 }
