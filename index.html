@@ -19,7 +19,11 @@
       <div class="confirm_order escondido">
         <h3>Confirme seu pedido</h3>
         <div class="detalhes_order">
-          <p class="message">DETALHES DO PEDIDO</p>
+          <p class="message_prato">DETALHES DO PEDIDO</p>
+          <p class="message_bebida">DETALHES DO PEDIDO</p>
+          <p class="message_sobremesa">DETALHES DO PEDIDO</p>
+          <p class="message_total">DETALHES DO PEDIDO</p>
+          <!-- <p class="message">DETALHES DO PEDIDO</p> -->
         </div>
         <button class="confirm" onclick="confirmarPedido()">
           <h3>Tudo certo, pode pedir!</h3>
@@ -47,9 +51,12 @@
             <p class="info">
               Um pouco de batata, um pouco de salada
             </p>
-            <p class="price">
-              R$ 14,90
-            </p>
+            <div>
+                <div>
+                    <p>R$</p><p class="price">14,90 </p>
+                </div>
+                <div><ion-icon class="icon nverificado" name="checkmark-circle"></ion-icon></div>  
+            </div>
           </div>
           <div class="option" onclick="selecionarPrato(this),tresPedidos()">
             <img src="img/pizza.jpg" />
@@ -57,9 +64,12 @@
             <p class="info">
               Sabor sortido, bordas especiais
             </p>
-            <p class="price">
-              R$ 24,90
-            </p>
+            <div>
+                <div>
+                    <p>R$</p><p class="price">24,90 </p>
+                </div>
+                <div><ion-icon class="icon nverificado" name="checkmark-circle"></ion-icon></div>    
+            </div>
           </div>
           <div class="option" onclick="selecionarPrato(this),tresPedidos()">
             <img src="img/hamburguer.jpg" />
@@ -67,9 +77,12 @@
             <p class="info">
               Com duas carnes, um pouco de batata
             </p>
-            <p class="price">
-              R$ 34,90
-            </p>
+            <div>
+                <div>
+                    <p>R$</p><p class="price">34,90 </p>
+                </div>
+                <div><ion-icon class="icon nverificado" name="checkmark-circle"></ion-icon></div>  
+            </div>
           </div>
           <div class="option" onclick="selecionarPrato(this),tresPedidos()">
             <img src="img/carne.jpg" />
@@ -77,9 +90,12 @@
             <p class="info">
               Picanha ao ponto, um pouco de salada
             </p>
-            <p class="price">
-              R$ 44,90
-            </p>
+            <div>
+                <div>
+                    <p>R$</p><p class="price">44,90 </p>
+                </div>
+                <div><ion-icon class="icon nverificado" name="checkmark-circle"></ion-icon></div>  
+            </div>
           </div>
         </div>
       </div>
@@ -94,9 +110,12 @@
             <p class="info">
               Lata 350ml
             </p>
-            <p class="price">
-              R$ 6,90
-            </p>
+            <div>
+                <div>
+                    <p>R$</p><p class="price">6,90 </p>
+                </div>
+                <div><ion-icon class="icon nverificado" name="checkmark-circle"></ion-icon></div>  
+            </div>
           </div>
           <div class="option" onclick="selecionarBebida(this),tresPedidos()">
             <img src="img/cerveja.jpg" />
@@ -104,9 +123,12 @@
             <p class="info">
               Garrafa 500ml
             </p>
-            <p class="price">
-              R$ 14,90
-            </p>
+            <div>
+                <div>
+                    <p>R$</p><p class="price">14,90 </p>
+                </div>
+                <div><ion-icon class="icon nverificado" name="checkmark-circle"></ion-icon></div>  
+            </div>
           </div>
           <div class="option" onclick="selecionarBebida(this),tresPedidos()">
             <img src="img/suco.jpg" />
@@ -114,9 +136,12 @@
             <p class="info">
               Garrafa 300ml
             </p>
-            <p class="price">
-              R$ 8,90
-            </p>
+            <div>
+                <div>
+                    <p>R$</p><p class="price">8,90 </p>
+                </div>
+                <div><ion-icon class="icon nverificado" name="checkmark-circle"></ion-icon></div>  
+            </div>
           </div>
           <div class="option" onclick="selecionarBebida(this),tresPedidos()">
             <img src="img/agua.png" />
@@ -124,9 +149,12 @@
             <p class="info">
               Garrafa 500ml
             </p>
-            <p class="price">
-              R$ 4,90
-            </p>
+            <div>
+                <div>
+                    <p>R$</p><p class="price">2,90 </p>
+                </div>
+                <div><ion-icon class="icon nverificado" name="checkmark-circle"></ion-icon></div>  
+            </div>
           </div>
         </div>
       </div>
@@ -141,9 +169,12 @@
             <p class="info">
               Pudim de leite condensado
             </p>
-            <p class="price">
-              R$ 5,90
-            </p>
+            <div>
+                <div>
+                    <p>R$</p><p class="price">4,90 </p>
+                </div>
+                <div><ion-icon class="icon nverificado" name="checkmark-circle"></ion-icon></div>  
+            </div>
           </div>
           <div class="option" onclick="selecionarSobremesa(this),tresPedidos()">
             <img src="img/bolo.jpg" />
@@ -151,9 +182,12 @@
             <p class="info">
               Bolo de queijo baga com calda
             </p>
-            <p class="price">
-              R$ 8,90
-            </p>
+            <div>
+                <div>
+                    <p>R$</p><p class="price">8,90 </p>
+                </div>
+                <div><ion-icon class="icon nverificado" name="checkmark-circle"></ion-icon></div>  
+            </div>
           </div>
           <div class="option" onclick="selecionarSobremesa(this),tresPedidos()">
             <img src="img/macarron.jpg" />
@@ -161,9 +195,12 @@
             <p class="info">
               Sabores sortidos
             </p>
-            <p class="price">
-              R$ 6,90
-            </p>
+            <div>
+                <div>
+                    <p>R$</p><p class="price">3,90 </p>
+                </div>
+                <div><ion-icon class="icon nverificado" name="checkmark-circle"></ion-icon></div>  
+            </div>
           </div>
           <div class="option" onclick="selecionarSobremesa(this),tresPedidos()">
             <img src="img/brigadeiro.jpg" />
@@ -171,9 +208,12 @@
             <p class="info">
               Brigadeiro sabor Nutella
             </p>
-            <p class="price">
-              R$ 4,90
-            </p>
+            <div>
+                <div>
+                    <p>R$</p><p class="price">1,90 </p>
+                </div>
+                <div><ion-icon class="icon nverificado" name="checkmark-circle"></ion-icon></div>  
+            </div>
           </div>
         </div>
       </div>
@@ -190,5 +230,6 @@
       </button>
     </div>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   </body>
 </html>
